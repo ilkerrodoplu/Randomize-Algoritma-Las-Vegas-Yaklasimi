@@ -8,7 +8,6 @@ public class LasVegas {
         this.hedefBolen= hedefBolen;
     }
     public static class Sonuc {
-
         public int  adimSayisi;
         public long sureNs;
 

@@ -20,7 +20,7 @@ public class Main{
         System.out.println(sep);
         System.out.println("  LAS VEGAS ALGORİTMASI — SONUÇ RAPORU");
         System.out.println("  Öğrenci No (Aynı zamanda Seed değerimiz) : "+ogrenciNumarasi);
-        System.out.printf("  n = %,d  |  Koşul : x %% "+hedefBolen+" == 0 \n", veriBoyutu);
+         System.out.printf("  n = %,d  |  Koşul : x %% %d == 0 \n", veriBoyutu, hedefBolen);
         System.out.println(sep);
 
         System.out.printf("\n [1/3] Veri seti oluşturuluyor (n=%,d, seed="+ogrenciNumarasi+")...\n", veriBoyutu);
@@ -29,8 +29,9 @@ public class Main{
         VeriOlusturucu veriOlusturucu = new VeriOlusturucu(hedefBolen);
 
         int[] veri = veriOlusturucu.rastgeleVeriOlustur(veriBoyutu, ogrenciNumarasi);
-        System.out.printf("      Tamamlandı (%.1f ms). İlk 5 eleman: "+veri[0]+" "+ veri[1]+" "+veri[2]+" "+veri[3]+" "+ veri[4]+" \n",
-                (System.nanoTime() - t0) / 1_000_000.0);
+         System.out.printf("      Tamamlandı (%.1f ms). İlk 5 eleman: %d %d %d %d %d \n",
+                 (System.nanoTime() - t0) / 1_000_000.0,
+                 veri[0], veri[1], veri[2], veri[3], veri[4]);
 
         System.out.println("\n[2/3] Teorik hesaplar yapılıyor...");
         TeorikHesap teorikHesap = new TeorikHesap(hedefBolen);

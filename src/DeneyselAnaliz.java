@@ -1,4 +1,3 @@
-
 public class DeneyselAnaliz {
     public int calismaSayisi;
     public int hedefBolen;
@@ -58,6 +57,6 @@ public class DeneyselAnaliz {
         System.out.printf("  Teorik Standart Sapma[X]      : %.4f%n", standartSapma);
         System.out.printf("  Deneysel standart sapma       : %.4f%n", standartAdim);
         System.out.printf("  Süre standart sapması         : %.4f ms \n", standartSure);
+        System.out.println("  Not: Geometrik dağılımda Var[X] = (1-p)/p²");
     }
-
 }
