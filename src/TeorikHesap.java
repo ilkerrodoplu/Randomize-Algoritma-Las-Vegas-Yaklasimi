@@ -15,7 +15,7 @@ public class TeorikHesap {
         double standartSapmaX = Math.sqrt(varyans);
 
         System.out.println("\n── TEORİK HESAP ──────────────────────────────────────");
-            System.out.printf("  Hedef eleman sayısı               : %,d%n",  hedefSayisi);
+        System.out.printf("  Hedef eleman sayısı               : %,d%n",  hedefSayisi);
         System.out.printf("  Başarı olasılığı (p)              : %.6f%n", p);
         System.out.printf("  E[X] = 1/p                        : %.4f  adım%n", ex);
         System.out.printf("  Varyans[X] = (1-p)/p^(2)          : %.4f%n", varyans);
