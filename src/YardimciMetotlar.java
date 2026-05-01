@@ -25,4 +25,15 @@ public class YardimciMetotlar {
     public static int min(int[] a) { int m = a[0]; for (int v : a) if (v < m) m = v; return m; }
     public static int max(int[] a) { int m = a[0]; for (int v : a) if (v > m) m = v; return m; }
 
+    //Formül => E[x] = 1/p -> beklenen adım sayısı
+    public static double E (double p){
+        return 1.0/p;
+    }
+    public static double varyans(double p){
+        return (1.0 - p) / (p * p);
+    }
+    //p: başarı olasılığı
+    public static double p(long hedefSayisi,int veriUzunlugu){
+        return (double) hedefSayisi /veriUzunlugu;
+    }
 }

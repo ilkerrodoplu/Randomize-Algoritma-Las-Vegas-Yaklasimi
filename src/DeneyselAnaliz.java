@@ -9,13 +9,7 @@ public class DeneyselAnaliz {
         this.hedefBolen = hedefBolen;
         this.ogrenciNumarasi = ogrenciNumarasi;
     }
-    //Formül => E[x] = 1/p -> beklenen adım sayısı
-    public static double E (double p){
-        return 1.0/p;
-    }
-    public static double standartSapma(double p){
-        return Math.sqrt((1.0 - p) / (p * p));
-    }
+
     public void deneyselAnaliz(int[] veri) {
         int[]  adimlar = new int[calismaSayisi];
         long[] sureler = new long[calismaSayisi];
@@ -48,21 +42,22 @@ public class DeneyselAnaliz {
 
         long hedefSayisi = 0;
         for (int x : veri) if (x % hedefBolen == 0) hedefSayisi++;
-        //p: başarı olasılığı
-        double p = (double) hedefSayisi / veri.length;
 
-        double farkPct = Math.abs(ortalamaAdim - E(p)) / E(p) * 100.0;
+        double p = YardimciMetotlar.p(hedefSayisi,veri.length);
+        double Ex = YardimciMetotlar.E(p);
+        double varyans = YardimciMetotlar.varyans(p);
+        double standartSapma = Math.sqrt(varyans);
+        double sapmaYuzdesi = Math.abs(ortalamaAdim - Ex) / Ex * 100.0;
 
         System.out.println("\n── TEORİ vs DENEY KARŞILAŞTIRMASI ───────────────────");
-        System.out.printf("  E[X]  (teorik)                : %.4f \n", E(p));
+        System.out.printf("  E[X]  (teorik)                : %.4f \n", Ex);
         System.out.printf("  Ortalama Adım  (deneysel)     : %.4f \n", ortalamaAdim);
-        System.out.printf("  Sapma yüzdesi                 : %%%.2f \n", farkPct);
+        System.out.printf("  Sapma yüzdesi                 : %%%.2f \n", sapmaYuzdesi);
 
         System.out.println("\n── RASTSALLIĞIN STANDART SAPMAYA ETKİSİ ─────────────");
-        System.out.printf("  Teorik Standart Sapma[X]        : %.4f%n", standartSapma(p));
-        System.out.printf("  Deneysel standart sapma         : %.4f%n", standartAdim);
-        System.out.printf("  Süre standart sapması           : %.4f ms \n", standartSure);
-        System.out.println("  Not: Geometrik dağılımda Var[X] = (1-p)/p^(2)");
+        System.out.printf("  Teorik Standart Sapma[X]      : %.4f%n", standartSapma);
+        System.out.printf("  Deneysel standart sapma       : %.4f%n", standartAdim);
+        System.out.printf("  Süre standart sapması         : %.4f ms \n", standartSure);
     }
 
 }
