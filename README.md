@@ -25,7 +25,3 @@ Program, rastgele oluşturulmuş büyük bir veri seti içerisinde 10'a tam böl
 ## 🛠️ Kurulum ve Kullanım
 
 Projeyi yerel bilgisayarınızda derleyip çalıştırmak için sisteminizde **Java (JDK)** kurulu olması gerekmektedir.
-
-1. Projeyi bilgisayarınıza klonlayın:
-   ```bash
-   git clone [https://github.com/KULLANICI_ADINIZ/las-vegas-algorithm.git](https://github.com/KULLANICI_ADINIZ/las-vegas-algorithm.git)
