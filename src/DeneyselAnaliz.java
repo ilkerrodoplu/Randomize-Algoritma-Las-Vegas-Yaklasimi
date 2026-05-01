@@ -41,10 +41,10 @@ public class DeneyselAnaliz {
         System.out.println("\n── DENEYSEL SONUÇLAR ("+calismaSayisi+" çalıştırma) ────────────────\n");
         System.out.printf("  Ortalama adım sayısı     : %.4f \n", ortalamaAdim);
         System.out.printf("  Standart sapma (adım)    : %.4f \n", standartAdim);
-        System.out.printf("  Min / Maks adım      : %d / %d \n", minimumAdim, maximumAdim);
+        System.out.printf("  Min / Maks adım          : %d / %d \n", minimumAdim, maximumAdim);
         System.out.printf("  Ortalama süre            : %.4f ms \n", ortalamaSure);
         System.out.printf("  Standart sapma (süre)    : %.4f ms \n", standartSure);
-        System.out.printf("  Toplam deney süresi  : %.1f ms \n", toplamSure / 1_000_000.0);
+        System.out.printf("  Toplam deney süresi      : %.1f ms \n", toplamSure / 1_000_000.0);
 
         long hedefSayisi = 0;
         for (int x : veri) if (x % hedefBolen == 0) hedefSayisi++;
@@ -54,15 +54,15 @@ public class DeneyselAnaliz {
         double farkPct = Math.abs(ortalamaAdim - E(p)) / E(p) * 100.0;
 
         System.out.println("\n── TEORİ vs DENEY KARŞILAŞTIRMASI ───────────────────");
-        System.out.printf("  E[X]  (teorik)       : %.4f \n", E(p));
-        System.out.printf("  Ort.  (deneysel)     : %.4f \n", ortalamaAdim);
-        System.out.printf("  Sapma yüzdesi        : %%%.2f \n", farkPct);
+        System.out.printf("  E[X]  (teorik)                : %.4f \n", E(p));
+        System.out.printf("  Ortalama Adım  (deneysel)     : %.4f \n", ortalamaAdim);
+        System.out.printf("  Sapma yüzdesi                 : %%%.2f \n", farkPct);
 
         System.out.println("\n── RASTSALLIĞIN STANDART SAPMAYA ETKİSİ ─────────────");
         System.out.printf("  Teorik Standart Sapma[X]        : %.4f%n", standartSapma(p));
-        System.out.printf("  Deneysel standart sapma  : %.4f%n", standartAdim);
-        System.out.printf("  Süre standart sapması    : %.4f ms%n", standartSure);
-        System.out.println("  Not: Geometrik dağılımda Var[X] = (1-p)/p²");
+        System.out.printf("  Deneysel standart sapma         : %.4f%n", standartAdim);
+        System.out.printf("  Süre standart sapması           : %.4f ms \n", standartSure);
+        System.out.println("  Not: Geometrik dağılımda Var[X] = (1-p)/p^(2)");
     }
 
 }
