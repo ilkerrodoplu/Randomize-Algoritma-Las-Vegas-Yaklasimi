@@ -28,8 +28,8 @@ public class DeneyselAnaliz {
         double standartAdim = YardimciMetotlar.standartSapma(adimlar, ortalamaAdim);
         double ortalamaSure = YardimciMetotlar.ortalama(sureler) / 1_000_000.0;
         double standartSure = YardimciMetotlar.standartSapma(sureler, YardimciMetotlar.ortalama(sureler)) / 1_000_000.0;
-        int    minimumAdim = YardimciMetotlar.min(adimlar);
-        int    maximumAdim = YardimciMetotlar.max(adimlar);
+        int minimumAdim = YardimciMetotlar.min(adimlar);
+        int maximumAdim = YardimciMetotlar.max(adimlar);
 
         System.out.println("\n── DENEYSEL SONUÇLAR ("+calismaSayisi+" çalıştırma) ────────────────\n");
         System.out.printf("  Ortalama adım sayısı     : %.4f \n", ortalamaAdim);
