@@ -15,10 +15,10 @@ public class TeorikHesap {
         double stdX = Math.sqrt(varX);
 
         System.out.println("\n── TEORİK HESAP ──────────────────────────────────────");
-        System.out.printf("  Hedef eleman sayısı  : %,d%n",  hedefSayisi);
-        System.out.printf("  Başarı olasılığı (p) : %.6f%n", p);
-        System.out.printf("  E[X] = 1/p           : %.4f  adım%n", ex);
-        System.out.printf("  Var[X] = (1-p)/p²    : %.4f%n", varX);
-        System.out.printf("  Std[X] = √Var[X]     : %.4f%n", stdX);
+        System.out.printf("  Hedef eleman sayısı     : %,d%n",  hedefSayisi);
+        System.out.printf("  Başarı olasılığı (p)    : %.6f%n", p);
+        System.out.printf("  E[X] = 1/p              : %.4f  adım%n", ex);
+        System.out.printf("  Var[X] = (1-p)/p^(2)    : %.4f%n", varX);
+        System.out.printf("  Std[X] = √Var[X]        : %.4f%n", stdX);
     }
 }
