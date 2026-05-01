@@ -13,14 +13,14 @@ public class LasVegas {
 
         Sonuc(int adimSayisi, long sureNs) {
             this.adimSayisi  = adimSayisi;
-            this.sureNs      = sureNs;
+            this.sureNs = sureNs;
         }
     }
     public Sonuc LasVegasAlgoritmasi(int[] veri, int seedOffset) {
-        int    n    = veri.length;
+        int n = veri.length;
         Random random = new Random(ogrenciNumarasi + seedOffset);
-        int    adim = 0;
-        long   t0   = System.nanoTime();
+        int adim = 0;
+        long t0 = System.nanoTime();
 
         while (true) {
             adim++;

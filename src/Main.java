@@ -1,13 +1,3 @@
-/**
- * =========================================================
- *   RANDOMİZE ALGORİTMA — LAS VEGAS YAKLAŞIMI
- *   Öğrenci No : 1240505027
- *   Son 2 hane : 27  →  Tek  →  Las Vegas
- *   Son rakam  : 7   →  Y>=5 →  n = 10^6
- *   Koşul       : dizi[i] % 10 == 0
- * =========================================================
- */
-
 public class Main{
     static final long ogrenciNumarasi = 1240505027L;
     static final int veriBoyutu = 1_000_000;
